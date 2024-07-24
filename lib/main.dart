@@ -1,10 +1,7 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const MaterialApp(
-    debugShowCheckedModeBanner: false,
-  ));
-  
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -13,9 +10,10 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       title: 'Login Page',
       home: LoginPage(),
+      debugShowCheckedModeBanner: false,
     );
   }
 }
@@ -26,28 +24,33 @@ class LoginPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: const Color.fromARGB(255, 255, 161, 161),
         appBar: AppBar(
-          title: Text("Login"),
+          backgroundColor: Color.fromARGB(255, 220, 219, 219),
+          title: const Text("Login"),
         ),
-        body:  Padding(
-          padding: EdgeInsets.all(16),
+
+        body: Padding(
+          padding: const EdgeInsets.all(16),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              TextField(
+              
+              const TextField(
                 decoration: InputDecoration(
                   labelText: "Username",
                 ),
               ),
-              TextField(
+              const TextField(
                 decoration: InputDecoration(
                   labelText: "Password",
                 ),
                 obscureText: true,
               ),
-              SizedBox(height: 20,),
-              ElevatedButton(onPressed: (){}
-              , child: Text("Login"))
+              const SizedBox(
+                height: 20,
+              ),
+              ElevatedButton(onPressed: () {}, child: const Text("Login"))
             ],
           ),
         ));
