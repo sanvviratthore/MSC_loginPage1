@@ -16,7 +16,7 @@ class Page1 extends StatelessWidget {
               const SnackBar(content: Text("This is Page 1")),
             );
           },
-          child: const Text("Show SnackBar"),
+          child: const Text("Back to Hone"),
         ),
       ),
     );
